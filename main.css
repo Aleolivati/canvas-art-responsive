@@ -166,8 +166,9 @@ footer {
     }
     
     header .container h1 {
-        font-size: 72px;
-        margin-bottom: 32px;
+        font-size: 62px;
+        margin-top: 12px;
+        margin-bottom: 42px;
     }
     
     header .container a {
