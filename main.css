@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    text-align: justify;
+}
+
+header {
+    padding: 16px 0;
+}
+
+.header-bg {
+    background-image: url(./images/header-bg.png);
+    filter: grayscale(1);
+    opacity: 0.6;
+    background-size: contain ;
+    width: 100%;
+    top: -3px;
+    max-height: 140px;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header li {
+    list-style-type: none;
+    float: left;
+    margin-left: 20px;
+}
+
+header .container h1 {
+    font-size: 82px;
+    color: #87187c;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+header .container a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    transition: all ease 0.2s;
+}
+
+header .container a:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.about .container {
+    display: flex;
+    margin-top: 48px;
+}
+
+.about .container img {
+    margin-right: 32px;
+    max-width: 95%;
+    height: 100%;
+}
+
+.about .container h2,
+.products .container h2 {
+    padding-bottom: 16px;
+    color:#87187c;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#underline {
+    display: flex;
+    height: 2px;
+    width: 100%;
+    margin-bottom: 32px;
+    background-image: url(./images/line.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.products .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.products .container h2 {
+    margin-top: 32px;
+}
+
+.products .container ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 23.5%);
+    grid-template-rows: 1fr 1fr 1.5fr;
+    column-gap: 2%;
+    row-gap: 6%;
+}
+
+.products .container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+    
+}
+
+.products .container h3 {
+    padding: 8px 0;
+    margin-top: 18px;    
+}
+
+.products .container p {
+    padding: 8px 0;
+    margin-bottom: 16px;
+}
+
+.products .container button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background-color: #87187c;
+    color: #ffffff;
+    transition: all ease 0.2s;
+    display: flex;
+    justify-content: center;
+}
+
+.products .container button:hover {
+    background-color: #a6439c;
+}
+
+footer {
+    display: block;
+    background-color: #87187c;
+    color:#ffffff;
+    padding: 16px 0;
+}
+
+@media screen and (max-width:640px) {
+
+    .container {
+        max-width: 90%;
+    }
+
+    header .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    header .container h1 {
+        font-size: 72px;
+        margin-bottom: 32px;
+    }
+    
+    header .container a {
+        font-size: 25px;
+        color: #ffffff;
+    }
+    
+    .about .container {
+        display: block;
+        margin-top: 28px;
+    }    
+
+    .about .container img {
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .about .container p {
+        padding-right: 16px;
+    }
+    
+    .products .container ul {
+        display: block;
+    }
+
+    .products .container button {
+        margin-bottom: 32px;
+    }
+
+    .products .container h3 {
+        margin-top: 5px;    
+    }
+
+    .products .container p {
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    
+    .container {
+        max-width: 90%;
+    }
+    
+    header .container li {
+        clear: both;
+        margin-bottom: 8px;
+    }
+
+
+    .about .container {
+        display: block;
+    }
+    
+    .about .container img {
+        margin-right: 0;
+        max-width: 100%;
+    }
+
+    .about .container p {
+        padding-right: 8px;
+    }
+    
+    .products .container ul {
+        grid-template-columns: repeat(2, 48%);
+        grid-template-rows: repeat(4, 1fr) 1.5fr;
+        row-gap: 2%;
+    }
+    
+    .products .container h3 {
+        margin-top: 10px;    
+    }
+
+}
